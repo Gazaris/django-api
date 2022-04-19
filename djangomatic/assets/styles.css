@@ -1,0 +1,44 @@
+{% load static %}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
+body{
+    background-color: #44B78B;
+    color: white;
+}
+header{
+    background-color: #2b7257;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+header > a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+header > a > h1{
+    margin-left: 10px;
+    font-weight: 800;
+}
+#logo{
+    height: 80px;
+    width: 80px;
+    background-image: url('img/momo.jpg');
+    background-size: cover;
+    border: 2px solid white;
+    border-radius: 10%;
+}
+
+#content{
+    font-family: 'Akshar', sans-serif;
+    text-align: center;
+}
+.article{
+    background-color: #2c906a;
+}
