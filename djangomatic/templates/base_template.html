@@ -11,10 +11,13 @@
 </head>
 <body>
     <header>
-        <a href="/">
+        <a href="{% url 'home' %}">
             <div id="logo"></div>
             <h1>Djangomatic</h1>
         </a>
+        <div class="navbtn">
+            <a href="{% url 'articles:list' %}">Articles</a>
+        </div>
     </header>
     <div id="content">
         {% block content %}

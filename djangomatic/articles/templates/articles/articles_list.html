@@ -2,10 +2,11 @@
 
 {% block title %} | Articles{% endblock %}
 {% block content %}
-    <div class="articles">
+    <h1>All Articles</h1>
+    <div id="articles">
         {% for article in articles %}
             <div class="article">
-                <h2><a href="#">{{ article.title }}</a></h2>
+                <a href="{% url 'articles:details' title=article.slug %}">{{ article.title }}</a>
                 <p>{{ article.date }}</p>
                 <p>{{ article.snippet }}</p>
             </div>

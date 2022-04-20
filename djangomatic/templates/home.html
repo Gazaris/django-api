@@ -1,6 +1,14 @@
 {% extends 'base_template.html' %}
 
 {% block content %}
-    <h1>Welcome</h1>
-    <p>This is my humble site :)</p>
+    <h1>Latest Articles</h1>
+    <div id="articles">
+        {% for article in articles %}
+            <div class="article">
+                <a href="{% url 'articles:details' title=article.slug %}">{{ article.title }}</a>
+                <p>{{ article.date }}</p>
+                <p>{{ article.snippet }}</p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
