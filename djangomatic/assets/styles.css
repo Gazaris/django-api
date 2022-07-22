@@ -5,6 +5,14 @@ body{
     background-color: #44B78B;
     color: white;
 }
+.noselect{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Safari */
+    -khtml-user-select: none;    /* Konqueror HTML */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently supported by Chrome and Opera */
+}
 header{
     background-color: #2b7257;
     height: 100px;
@@ -12,10 +20,11 @@ header{
     flex-direction: row;
     align-items: center;
     padding-left: 10px;
+    padding-right: 10px;
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
 }
-header > a{
+header > a:nth-child(1){
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,18 +48,26 @@ header > a > h1{
     padding: 10px;
     background-color: #173e2f;
     border-radius: 5px;
-}
-.navbtn > a{
     color: white;
     text-decoration: none;
+    transition: all .2s ease-in-out;
 }
-.navbtn > a:hover{
-    text-decoration: underline;
+.navbtn:hover{
+    box-shadow: 5px 5px 10px black;
+}
+#account {
+    margin-left: auto;
+}
+#login-navbtn{
+    margin-left: 0;
 }
 
 #content{
     font-family: 'Akshar', sans-serif;
     text-align: center;
+}
+.btn{
+    border: none;
 }
 #articles{
     display: flex;
@@ -66,7 +83,6 @@ header > a > h1{
     transition: all .2s ease-in-out;
 }
 .article:hover{
-    transform: translateY(-5px);
     box-shadow: 5px 5px 15px black;
 }
 .article > a{
@@ -84,10 +100,23 @@ header > a > h1{
     padding: 10px;
     border-radius: 10px;
     margin-top: 10px;
+    display: flex;
+    flex-direction: row;
 }
-#article_details > h1, #article_details p:nth-of-type(2){
+#article_details > img {
+    border-radius: 5px;
+    border: 3px solid gray;
+    background-color: #5dd5a7;
+    max-width: 200px;
+    margin-bottom: auto;
+}
+#article_details .content {
+    margin-left: 20px;
+    text-align: left;
+}
+#article_details > .content > h1, #article_details p:nth-of-type(2){
     margin: 0 0 5px 0;
 }
-#article_details p:nth-of-type(1){
+#article_details > .content p:nth-of-type(1){
     margin: 0 0 10px 0;
 }

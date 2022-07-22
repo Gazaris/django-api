@@ -8,6 +8,5 @@ def articles_list(request):
     return render(request, 'articles/articles_list.html', {'articles': articles})
 
 def article_details(request, title):
-    # return HttpResponse(title)
     article = Article.objects.get(slug=title)
-    return render(request, 'articles/article_details.html', { 'article' : article})
+    return render(request, 'articles/article_details.html', {'article' : article})
